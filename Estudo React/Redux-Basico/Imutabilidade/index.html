@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Redux</title>
+  <script src="../redux.min.js"></script>
+</head>
+
+<body>
+
+  <script>
+
+    const array1 = [0, 1, 2, 3, 4]
+    const array2 = array1.filter(item => item > 2)
+
+    // console.log(array2 === array1);
+    // console.log(array1);
+    // console.log(array2);
+
+
+    const obj1 = {
+      nome: 'Paulo',
+      idade: 31
+    }
+    // const obj2 = Object.assign({}, obj1, { nome: 'Maria' })
+    // const obj2 = { ...obj1, nome: 'Maria' }
+    const obj2 = obj1
+    obj2.nome = 'Maria'
+    console.log(obj1 === obj2);
+    console.log(obj1);
+    console.log(obj2);
+
+
+
+
+
+    const inicialState = {
+      nome: 'Paulo',
+      idade: 19
+    }
+
+    function reducer(state = inicialState, action) {
+      switch (action.type) {
+        case 'MUDAR_NOME':
+          return { ...state, nome: action.payload }
+        default:
+          return state
+      }
+    }
+
+    const store = Redux.createStore(
+      reducer,
+      window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__(),
+    );
+
+    store.dispatch({ type: 'MUDAR_NOME', payload: 'Maria' })
+    store.dispatch({ type: 'MUDAR_NOME', payload: 'João' })
+    store.dispatch({ type: 'MUDAR_NOME', payload: 'Pedro' })
+    store.dispatch({ type: 'TESTE', payload: 'Pedro' })
+
+  </script>
+</body>
+
+</html>
