@@ -1,0 +1,59 @@
+.photos {
+  display: grid;
+}
+
+.listItems {
+  display: grid;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.item {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 10px;
+  background-color: #eee;
+  overflow: hidden;
+  border-radius: 5px;
+}
+
+.info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 10px;
+}
+
+.title {
+  font-size: 1rem;
+}
+
+.visualization {
+  font-size: 0.8rem;
+  font-family: monospace;
+  color: #888;
+}
+
+.image {
+  width: 50px;
+  height: 50px;
+  border-radius: 5px;
+  background-color: #777;
+}
+
+.button {
+  justify-self: end;
+  padding: 10px;
+  border-radius: 50%;
+  box-shadow: none;
+  background-color: #000;
+  color: #fff;
+  border: none;
+  transition: 0.3s;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+.button:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}

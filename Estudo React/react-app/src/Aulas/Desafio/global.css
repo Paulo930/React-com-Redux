@@ -1,0 +1,34 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+.container {
+  max-width: 350px;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.animeLeft {
+  transform: translateX(-20px);
+  opacity: 0;
+  animation: animeLeft 0.4s forwards;
+}
+
+@keyframes animeLeft {
+  to {
+    transform: initial;
+    opacity: 1;
+  }
+}
