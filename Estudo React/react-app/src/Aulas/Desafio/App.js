@@ -10,7 +10,7 @@ function App() {
   return (
     <section className="container">
       <Header />
-      {!user ? <Photos /> : <Login />}
+      {user ? <Photos /> : <Login />}
     </section>
   );
 }
